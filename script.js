@@ -16,10 +16,6 @@ reader.onload = function (file) {
     document.getElementById("ncc").getElementsByTagName("td")[1].textContent = text.match(/NominalChargeCapacity":\s*([0-9.]+)/i)[1] + " mAh";
     document.getElementById("at").getElementsByTagName("td")[1].textContent = text.match(/AverageTemperature":\s*([0-9.]+)/i)[1] + " °C";
     document.getElementById("lie").getElementsByTagName("td")[1].textContent = (Math.sign(lie) == -1 ? '-' : '+') + lie.toFixed(2) + "%"; 
-
-    document.getElementById("rbh").getElementsByTagName("td").bold();
-    document.getElementById("cc").getElementsByTagName("td")[1].textContent = text.match(/last_value_CycleCount":\s*([0-9.]+)/i)[1];
-    document.getElementById("cbh").getElementsByTagName("td")[1].textContent = nccp.toFixed(2) + "%";
 };
 
 fileInput.onchange = () => {
