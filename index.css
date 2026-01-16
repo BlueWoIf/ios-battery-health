@@ -33,6 +33,10 @@ body {
         td:nth-of-type(odd) {
             text-align: left;
         }
+
+        .bold {
+            font-weight: bold;
+        }
     }
 
     #upload {
